@@ -8,13 +8,13 @@ import com.kafka.springbootkafkaconsumerexample.model.User;
 @Service
 public class KafkaConsumer {
 
-    @KafkaListener(topics = "KafkaExample", group = "group_id")
+    @KafkaListener(topics = "KafkaExample", groupId = "group_id")
     public void consume(String message) {
         System.out.println("Consumed message: " + message);
     }
 
 
-    @KafkaListener(topics = "KafkaExample_json", group = "group_json", containerFactory = "userKafkaListenerFactory")
+    @KafkaListener(topics = "KafkaExample_json",  groupId = "group_json", containerFactory = "userKafkaListenerFactory")
     public void consumeJson(User user) {
         System.out.println("Consumed JSON Message: " + user);
     }
