@@ -30,3 +30,6 @@ Start Zookeeper and Kafka
 > bin/kafka-server-start.sh config/server.properties
 
 @Ref: https://dzone.com/articles/spring-cloud-stream-with-kafka
+
+
+http://localhost:8080/greetings?message=hello
